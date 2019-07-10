@@ -1,0 +1,38 @@
+using System;
+
+namespace BuildingClass {
+
+            class Building
+            {
+                private string _designer;
+                private DateTime _timeConstructed;
+                private string _address;
+                private string _owner;
+                public int Stories { get; set; }
+                public double Width { get; set; }
+                public double Depth { get; set; }
+                public double Volume
+                    {
+                        get
+                            {
+                            return (Width * Depth * (Stories * 3));
+                            }
+                    }
+                
+                public Building(string address)
+                {
+                    address = _address;
+                }
+                public void Construct()
+                {
+                    _timeConstructed = DateTime.Now;
+                }
+                public void Purchase(string ownerName)
+                {
+                    _owner = ownerName;
+                    Console.WriteLine($"Designed by {_owner}. Constructed on {_timeConstructed}. Owned by {_owner}. {Volume} cubic meters of space.");
+                }
+
+}
+}
+
