@@ -1,12 +1,15 @@
 ﻿using System;
 using BuildingClass;
+using CityClass;
 
 namespace Planner
 {
     class Program
     {
+        // Main method
         static void Main(string[] args)
         {
+        // Instantiating three buildings
         var building1 = new Building("512 8th Avenue") {
             Width = 50,
             Depth = 80,

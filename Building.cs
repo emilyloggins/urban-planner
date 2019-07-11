@@ -4,6 +4,7 @@ namespace BuildingClass {
 
             class Building
             {
+                //  Creating Building properties
                 private string _designer;
                 private DateTime _timeConstructed;
                 private string _address;
@@ -18,15 +19,17 @@ namespace BuildingClass {
                             return (Width * Depth * (Stories * 3));
                             }
                     }
-                
+                // Setting Building constructor
                 public Building(string address)
                 {
                     address = _address;
                 }
+                // A method that sets date and time of construction
                 public void Construct()
                 {
                     _timeConstructed = DateTime.Now;
                 }
+                // method that logs information to the console
                 public void Purchase(string ownerName)
                 {
                     _owner = ownerName;
