@@ -8,15 +8,17 @@ namespace CityClass {
         public string name { get; set; }
         public string mayor { get; set; }
         public int establishedYear { get; set; }
-        public List<Building> buildingsInCity { get; set; }
+        // public List<Building> buildingsInCity { get; set; }
+        public List<Building> buildingsInCity = new List<Building>();
 
         // Setting City constructor method
-        public City(string name, string mayor, int establishedYear, List<Building> buildings) {
+        public City(string name, string mayor, int establishedYear) {
                 var nameOfCity = name;
                 var mayorOfCity = mayor;
                 var establishedYearOfCity = establishedYear;
-                var buildingsInCity = new List<Building>();
         }
-
+        public void AddBuilding(Building selectedBuilding) {
+                buildingsInCity.Add(selectedBuilding);
+        }
 }
 }
