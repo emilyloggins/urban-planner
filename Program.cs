@@ -44,7 +44,7 @@ namespace Planner
         city1.AddBuilding(building3);
 
         foreach (Building building in city1.buildingsInCity) {
-            Console.WriteLine(building.Volume);
+            Console.WriteLine(building.Address);
         }
     }
     }
