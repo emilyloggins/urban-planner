@@ -2,7 +2,7 @@ using System;
 
 namespace BuildingClass {
 
-            class Building
+            public class Building
             {
                 //  Creating Building properties
                 private string _designer;
@@ -19,6 +19,11 @@ namespace BuildingClass {
                             return (Width * Depth * (Stories * 3));
                             }
                     }
+                public string Address {
+                    get {
+                        return _address;
+                    }
+                }
                 // Setting Building constructor
                 public Building(string address)
                 {
